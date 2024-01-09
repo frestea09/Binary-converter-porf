@@ -39,7 +39,7 @@ function FormInput(){
         <div className="flex flex-col lg:flex-row px-8 gap-2">
             <div className="flex flex-col gap-2">
                 <label>From</label>
-                <select className="bg-gray-100 border rounded  px-4 py-3" {...register('typeFrom')}>
+                <select disabled className="bg-gray-100 border rounded  px-4 py-3" {...register('typeFrom')}>
                     {listOfOption.map(
                         item => <option className="bg-gray-100 border capitalize" key={item.base} value={item.base}>{item.type}</option>
                     )}
@@ -47,9 +47,9 @@ function FormInput(){
             </div>
             <div className="flex flex-col gap-2">
                 <label>To</label>
-                <select className="bg-gray-100 border rounded  px-4 py-3"  {...register('typeTo')}>
+                <select disabled className="bg-gray-100 border rounded  px-4 py-3"  {...register('typeTo')}>
                     {listOfOption.map(
-                        item => <option className="bg-gray-100 borde capitalize" key={item.base} value={item.base}>{item.type}</option>
+                        item => <option  className="bg-gray-100 borde capitalize" key={item.base} value={'Binary'}>{'Binary'}</option>
                         )}
                 </select>
             </div>
